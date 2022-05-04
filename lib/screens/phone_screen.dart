@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/widgets/custom_button.dart';
 import 'package:flutter_auth/widgets/new_textfield.dart';
 
 class PhoneScreen extends StatefulWidget {
@@ -39,22 +40,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
             ),
           ),
           const SizedBox(height: 40),
-          ElevatedButton(
-            onPressed: () {},
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.blue),
-              textStyle: MaterialStateProperty.all(
-                const TextStyle(color: Colors.white),
-              ),
-              minimumSize: MaterialStateProperty.all(
-                Size(MediaQuery.of(context).size.width / 2.5, 50),
-              ),
-            ),
-            child: const Text(
-              "OK",
-              style: TextStyle(color: Colors.white, fontSize: 16),
-            ),
-          ),
+          CustomButton(onTap: () {}, text: 'OK'),
         ],
       ),
     );
