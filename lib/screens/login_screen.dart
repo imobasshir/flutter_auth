@@ -17,8 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 CustomButton(
                   onTap: () {
@@ -26,31 +25,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   text: 'Email/Password Sign Up',
                 ),
-                const SizedBox(height: 16),
                 CustomButton(
                   onTap: () {
                     Navigator.pushNamed(context, "/emailPwdLogin");
                   },
                   text: 'Email/Password Login',
                 ),
-                const SizedBox(height: 16),
                 CustomButton(
                   onTap: () {
                     Navigator.pushNamed(context, "/phone");
                   },
                   text: 'Phone Sign In',
                 ),
-                const SizedBox(height: 16),
                 CustomButton(
                   onTap: () {},
                   text: 'Google Sign In',
                 ),
-                const SizedBox(height: 16),
                 CustomButton(
                   onTap: () {},
                   text: 'Facebook Sign In',
                 ),
-                const SizedBox(height: 16),
                 CustomButton(
                   onTap: () {},
                   text: 'Anonymous Sign In',
