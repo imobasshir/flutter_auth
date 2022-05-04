@@ -39,7 +39,7 @@ class _EmailPasswordLoginState extends State<EmailPasswordLogin> {
             child: NewTextField(
               controller: passwordController,
               hintText: 'Enter your password',
-              keyb: TextInputType.visiblePassword,
+              keyb: TextInputType.text,
               ans: true,
             ),
           ),
