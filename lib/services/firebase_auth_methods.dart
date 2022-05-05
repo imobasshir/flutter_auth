@@ -11,6 +11,10 @@ class FirebaseAuthMethods {
   FirebaseAuthMethods(
     this._auth,
   );
+  User get user => _auth.currentUser!;
+
+  Stream<User?> get authState => _auth.authStateChanges();
+
   // Email SignUp
   Future<void> signUpWithEmail({
     required String email,
@@ -151,10 +155,10 @@ class FirebaseAuthMethods {
     try {
       final LoginResult loginResult = await FacebookAuth.instance.login();
       final OAuthCredential facebookAuthCredential =
-      FacebookAuthProvider.credential(loginResult.accessToken!.token);
+          FacebookAuthProvider.credential(loginResult.accessToken!.token);
 
       await _auth.signInWithCredential(facebookAuthCredential);
-    } on FirebaseAuthException catch(e) {
+    } on FirebaseAuthException catch (e) {
       showSnackBar(context, e.message!);
     }
   }
@@ -165,6 +169,26 @@ class FirebaseAuthMethods {
       await _auth.signInAnonymously();
     } on FirebaseAuthException catch (e) {
       showSnackBar(context, e.message!);
+    }
+  }
+
+  // SignOut
+  Future<void> signOut(BuildContext context) async {
+    try {
+      await _auth.signOut();
+    } on FirebaseAuthException catch (e) {
+      showSnackBar(context, e.message!); // Displaying the error message
+    }
+  }
+
+  // DELETE ACCOUNT
+  Future<void> deleteAccount(BuildContext context) async {
+    try {
+      await _auth.currentUser!.delete();
+    } on FirebaseAuthException catch (e) {
+      showSnackBar(context, e.message!); // Displaying the error message
+      // if an error of requires-recent-login is thrown, make sure to log
+      // in user again and then delete account.
     }
   }
 }
