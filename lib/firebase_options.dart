@@ -60,6 +60,6 @@ class DefaultFirebaseOptions {
     projectId: 'flutter-auth-33fb8',
     storageBucket: 'flutter-auth-33fb8.appspot.com',
     iosClientId: '699276232169-1qv7eqtishio5g9la6fee5luhro6b7fk.apps.googleusercontent.com',
-    iosBundleId: 'com.example.flutterAuth',
+    iosBundleId: 'io.github.imobasshir.flutterAuth',
   );
 }
