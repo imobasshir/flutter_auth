@@ -146,7 +146,7 @@ class FirebaseAuthMethods {
     }
   }
 
-//  Facebook Signin
+  // Facebook Signin
   Future<void> signInWithFacebook(BuildContext context) async {
     try {
       final LoginResult loginResult = await FacebookAuth.instance.login();
@@ -155,6 +155,15 @@ class FirebaseAuthMethods {
 
       await _auth.signInWithCredential(facebookAuthCredential);
     } on FirebaseAuthException catch(e) {
+      showSnackBar(context, e.message!);
+    }
+  }
+
+  // Anonimous Signin
+  Future<void> signInAnonymously(BuildContext context) async {
+    try {
+      await _auth.signInAnonymously();
+    } on FirebaseAuthException catch (e) {
       showSnackBar(context, e.message!);
     }
   }
