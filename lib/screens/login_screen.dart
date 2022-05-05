@@ -47,7 +47,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: 'Google Sign In',
                 ),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    FirebaseAuthMethods(FirebaseAuth.instance)
+                        .signInWithFacebook(context);
+                  },
                   text: 'Facebook Sign In',
                 ),
                 CustomButton(
