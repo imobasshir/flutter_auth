@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_auth/services/firebase_auth_methods.dart';
 import 'package:flutter_auth/widgets/custom_button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -38,7 +40,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   text: 'Phone Sign In',
                 ),
                 CustomButton(
-                  onTap: () {},
+                  onTap: () {
+                    FirebaseAuthMethods(FirebaseAuth.instance)
+                        .signInWithGoogle(context);
+                  },
                   text: 'Google Sign In',
                 ),
                 CustomButton(
