@@ -1,16 +1,23 @@
 # flutter_auth
 
-A new Flutter project.
+A new Flutter project on firebase authentication.
+
+## 💻 Installation
+- You should have updated `Flutter 2.10` now.
+
+Open Terminal and open the location where you want to clone project and run with following commands.
+```
+git clone https://github.com/imobasshir/flutter_auth.git
+cd flutter_auth
+flutter pub get
+flutter run
+```
+
+## 🧑 Author
+### Mobasshir Imam
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[online documentation on flutter](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference, and [flutterfire that is firebase documentation](https://firebase.flutter.dev/) 
+which offers tutorials, samples, guidance on firebase, and a full API reference.
